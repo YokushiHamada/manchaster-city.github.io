@@ -42,7 +42,7 @@ nav a {
 }
 
 nav a:hover {
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 aside .profile {
@@ -71,8 +71,13 @@ aside .profile {
   border-radius: 15px;
 }
 
+.profile figure {
+  display: flex;
+  justify-content: center;
+}
+
 .profile img {
-  width: 200px;
+  width: 220px;
 }
 
 .card {
@@ -162,6 +167,7 @@ header {
 .player-list ul li:hover {
   background-color: #2facc8;
   color: white;
+  font-weight: bold;
 }
 
 #content > article {
@@ -247,12 +253,31 @@ header {
   .player-list ul li {
     text-align: center;
   }
+  .dropdown-content a {
+    font-size: small;
+  }
 }
 
-/* perangkar dengan lebar layar 768px dan di bawahnya */
-@media screen and (max-width: 768px) {
+/* perangkar dengan lebar layar 750px dan di bawahnya */
+@media screen and (max-width: 750px) {
+  .jumbotron h1 {
+    font-size: larger;
+  }
+  .jumbotron h3 {
+    font-size: large;
+  }
   nav ul {
     justify-content: center;
+    align-items: baseline;
+  }
+  nav {
+    padding-block: 0.5px;
+  }
+  nav li a {
+    font-size: medium;
+  }
+  nav li .dropdown .dropbtn {
+    font-size: medium;
   }
   main aside {
     align-self: stretch;
@@ -271,5 +296,68 @@ header {
   }
   .player-list ul li {
     width: 200px;
+  }
+  .dropdown-content {
+    right: 20px;
+  }
+  .dropdown-content a {
+    font-size: smaller;
+  }
+  .player-list ul li {
+    font-size: 13px;
+  }
+  footer p {
+    font-size: small;
+  }
+}
+
+/* perangkar dengan lebar layar 380px dan di bawahnya */
+@media screen and (max-width: 380px) {
+  .jumbotron h1 {
+    font-size: 22px;
+  }
+  .jumbotron h3 {
+    font-size: medium;
+  }
+  nav ul {
+    justify-content: center;
+    align-items: baseline;
+  }
+  nav {
+    padding-block: 0.5px;
+  }
+  nav li a {
+    font-size: small;
+  }
+  nav li .dropdown .dropbtn {
+    font-size: small;
+  }
+  #content article > h2 {
+    font-size: 25px;
+  }
+  .player-list ul li {
+    font-size: small;
+  }
+  #trophy h3 {
+    font-size: 20px;
+  }
+}
+
+/* perangkar dengan lebar layar 320px dan di bawahnya */
+@media screen and (max-width: 320px) {
+  .jumbotron h1 {
+    font-size: 17px;
+  }
+  .jumbotron h3 {
+    font-size: 15px;
+  }
+  nav {
+    max-height: 60px;
+  }
+  .dropbtn {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    align-items: baseline;
   }
 }
